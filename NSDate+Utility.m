@@ -12,7 +12,7 @@
 
 + (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day {
     
-    NSCalendar *_gregorianCalendar = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+    NSCalendar *_gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     [_gregorianCalendar setLocale:[NSLocale currentLocale]];
     [_gregorianCalendar setFirstWeekday:1];
     
@@ -76,11 +76,11 @@
 }
 
 - (NSDate *)dateByAddingDays:(NSInteger)days {
-    NSCalendar *_gregorianCalendar = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+    NSCalendar *_gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     [_gregorianCalendar setLocale:[NSLocale currentLocale]];
     [_gregorianCalendar setFirstWeekday:1];
     
-    NSDateComponents *_dateOffsetComponents = [[[NSDateComponents alloc] init] autorelease];
+    NSDateComponents *_dateOffsetComponents = [[NSDateComponents alloc] init];
     [_dateOffsetComponents setDay:days];
     
     NSDate *_newDate = [_gregorianCalendar dateByAddingComponents:_dateOffsetComponents toDate:self options:0];
@@ -92,11 +92,11 @@
 }
 
 - (NSDate *)dateBySubtractingDays:(NSInteger)days {
-    NSCalendar *_gregorianCalendar = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+    NSCalendar *_gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     [_gregorianCalendar setLocale:[NSLocale currentLocale]];
     [_gregorianCalendar setFirstWeekday:1];
     
-    NSDateComponents *_dateOffsetComponents = [[[NSDateComponents alloc] init] autorelease];
+    NSDateComponents *_dateOffsetComponents = [[NSDateComponents alloc] init];
     [_dateOffsetComponents setDay:-days];
     
     NSDate *_newDate = [_gregorianCalendar dateByAddingComponents:_dateOffsetComponents toDate:self options:0];
@@ -108,11 +108,11 @@
 }
 
 - (NSDate *)dateByAddingMonths:(NSInteger)months {
-    NSCalendar *_gregorianCalendar = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+    NSCalendar *_gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     [_gregorianCalendar setLocale:[NSLocale currentLocale]];
     [_gregorianCalendar setFirstWeekday:1];
     
-    NSDateComponents *_dateOffsetComponents = [[[NSDateComponents alloc] init] autorelease];
+    NSDateComponents *_dateOffsetComponents = [[NSDateComponents alloc] init];
     [_dateOffsetComponents setMonth:months];
     
     NSDate *_newDate = [_gregorianCalendar dateByAddingComponents:_dateOffsetComponents toDate:self options:0];
@@ -125,11 +125,11 @@
 }
 
 - (NSDate *)dateBySubtractingMonths:(NSInteger)months {
-    NSCalendar *_gregorianCalendar = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+    NSCalendar *_gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     [_gregorianCalendar setLocale:[NSLocale currentLocale]];
     [_gregorianCalendar setFirstWeekday:1];
     
-    NSDateComponents *_dateOffsetComponents = [[[NSDateComponents alloc] init] autorelease];
+    NSDateComponents *_dateOffsetComponents = [[NSDateComponents alloc] init];
     [_dateOffsetComponents setMonth:-months];
     
     NSDate *_newDate = [_gregorianCalendar dateByAddingComponents:_dateOffsetComponents toDate:self options:0];
@@ -141,11 +141,11 @@
 }
 
 - (NSDate *)dateByAddingYears:(NSInteger)years {
-    NSCalendar *_gregorianCalendar = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+    NSCalendar *_gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     [_gregorianCalendar setLocale:[NSLocale currentLocale]];
     [_gregorianCalendar setFirstWeekday:1];
     
-    NSDateComponents *_dateOffsetComponents = [[[NSDateComponents alloc] init] autorelease];
+    NSDateComponents *_dateOffsetComponents = [[NSDateComponents alloc] init];
     [_dateOffsetComponents setYear:years];
     
     NSDate *_newDate = [_gregorianCalendar dateByAddingComponents:_dateOffsetComponents toDate:self options:0];
@@ -157,11 +157,11 @@
 }
 
 - (NSDate *)datebySubtractingYears:(NSInteger)years {
-    NSCalendar *_gregorianCalendar = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+    NSCalendar *_gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     [_gregorianCalendar setLocale:[NSLocale currentLocale]];
     [_gregorianCalendar setFirstWeekday:1];
     
-    NSDateComponents *_dateOffsetComponents = [[[NSDateComponents alloc] init] autorelease];
+    NSDateComponents *_dateOffsetComponents = [[NSDateComponents alloc] init];
     [_dateOffsetComponents setYear:-years];
     
     NSDate *_newDate = [_gregorianCalendar dateByAddingComponents:_dateOffsetComponents toDate:self options:0];
@@ -173,7 +173,7 @@
 }
 
 - (NSInteger)dayOfWeek {
-    NSCalendar *_gregorianCalendar = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+    NSCalendar *_gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     [_gregorianCalendar setLocale:[NSLocale currentLocale]];
     [_gregorianCalendar setFirstWeekday:1];
     
@@ -184,7 +184,7 @@
 }
 
 - (NSInteger)month {
-    NSCalendar *_gregorianCalendar = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+    NSCalendar *_gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     [_gregorianCalendar setLocale:[NSLocale currentLocale]];
     [_gregorianCalendar setFirstWeekday:1];
     
@@ -195,7 +195,7 @@
 }
 
 - (NSInteger)year {
-    NSCalendar *_gregorianCalendar = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+    NSCalendar *_gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     [_gregorianCalendar setLocale:[NSLocale currentLocale]];
     [_gregorianCalendar setFirstWeekday:1];
     
